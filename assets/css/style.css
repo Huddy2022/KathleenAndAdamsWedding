@@ -41,5 +41,21 @@ body.venue {
 
 .venue_logo {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 120px;
 }
+
+.information {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px; 
+    margin-top: 50px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+}
+
+.information p, li{
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+}
+
