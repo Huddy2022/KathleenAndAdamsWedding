@@ -13,5 +13,16 @@ body {
 }
 
 .header_logo {
-    width: 50%; 
+    width: 100%;
+}
+
+.gold-text {
+    color: rgb(194, 165, 0);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.fancy-countdown {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 35px;
+    letter-spacing: 3px;
 }
