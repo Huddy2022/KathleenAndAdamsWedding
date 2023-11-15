@@ -1,7 +1,16 @@
 body {
+    color: #fff;
+}
+
+body.index {
     background-image: url('/assets/images/background.jpg');
     background-size: cover;
-    color: #fff;
+    background-repeat: no-repeat;
+}
+
+body.venue {
+    background-image: url('/assets/images/ashes.png');
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -12,6 +21,7 @@ body {
     /* Semi-transparent white background for navbar */
 }
 
+/* index page */
 .header_logo {
     width: 100%;
 }
@@ -25,4 +35,11 @@ body {
     font-family: 'Playfair Display', sans-serif;
     font-size: 35px;
     letter-spacing: 3px;
+}
+
+/* venue page */
+
+.venue_logo {
+    width: 100%;
+    margin-top: 100px;
 }
