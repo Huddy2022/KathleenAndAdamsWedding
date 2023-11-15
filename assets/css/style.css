@@ -1,11 +1,17 @@
 body {
-    background-image: url('assets/images/background.jpg');
+    background-image: url('/assets/images/background.jpg');
     background-size: cover;
     color: #fff;
-    /* Text color on the background */
+    background-repeat: no-repeat;
 }
 
 .navbar {
     background-color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    font-size: 20px;
     /* Semi-transparent white background for navbar */
+}
+
+.header_logo {
+    width: 50%; 
 }
