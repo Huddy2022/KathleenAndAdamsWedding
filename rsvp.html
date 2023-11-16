@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="index">
+<body class="rsvp">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a class="navbar-brand" href="index.html"><img src="assets/images/home_logo.png" alt="Home Icon" width="250"
                 height="75"></a>
@@ -41,63 +41,46 @@
                     <a class="nav-link" href="wishing-well.html">Wishing Well</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="rsvp.html">RSVP</a>
+                    <a class="nav-link" href="#">RSVP</a>
                 </li>
             </ul>
         </div>
     </nav>
-
-    <div class="container d-flex flex-column align-items-center justify-content-center vh-100">
+    <div class="container d-flex flex-column align-items-center justify-content-center">
         <!-- Logo Section -->
         <div class="text-center">
-            <img class="header_logo" src="assets/images/header_logo.png" alt="wedding logo">
+            <img class="rsvp-logo" src="assets/images/rsvp-logo.png" alt="rsvp logo">
         </div>
-        <!-- Countdown Clock Section -->
-        <div class="container text-center mt-3">
-            <h2 class="gold-text fancy-countdown">Countdown to the Wedding</h2>
-            <div id="countdown" class="gold-text fancy-countdown"></div>
+        <div class="text-center rsvp-date">
+            <p>14th June 2024</p>
+        </div>
+    </div>
+    <div class="container mt-6">
+        <div class="row">
+            <!-- First container -->
+            <div class="col-md-3"></div>
+            <div class="col-md-6 information accomodation-container form">
+                <h2 class="text-center mb-4">Who is completing this RSVP?</h2>
+
+                <!-- RSVP Form -->
+                <form action="#" method="post" class="text-center form">
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                    </div>
+
+                    <button type="submit" class="rsvp-btn">That's Me</button>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
         </div>
     </div>
 
-    <footer class="footer mt-auto py-3">
-        <div class="container text-center">
-            <button href="rsvp.html" class="rsvp-btn">RSVP by 19th February 2024</button>
-        </div>
-    </footer>
-
-
-
 </body>
-<!-- JavaScript for Countdown -->
-<script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("June 14, 2024 00:00:00").getTime();
-
-    // Update the countdown every 1 second
-    var x = setInterval(function () {
-
-        // Get the current date and time
-        var now = new Date().getTime();
-
-        // Calculate the remaining time
-        var distance = countDownDate - now;
-
-        // Calculate days, hours, minutes, and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Display the countdown
-        document.getElementById("countdown").innerHTML =
-            days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-        // If the countdown is over, display a message
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("countdown").innerHTML = "EXPIRED";
-        }
-    }, 1000);
-</script>
 
 </html>

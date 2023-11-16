@@ -32,6 +32,12 @@ body.wishing-well {
     background-repeat: no-repeat;
 }
 
+body.rsvp {
+    background-image: url('/assets/images/wishing-well-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .navbar {
     background-color: rgba(255, 255, 255, 0.5);
     font-weight: bold;
@@ -139,7 +145,7 @@ body.wishing-well {
 
 .date p {
     font-family: 'Playfair Display', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 10px;
     margin-bottom: 0px;
     padding-left: 5px;
@@ -162,4 +168,23 @@ body.wishing-well {
 .wishing-logo {
     width: 100%;
     margin-top: 120px;
+}
+
+/* RSVP */
+
+.rsvp-logo {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.rsvp-date p {
+    font-family: 'Playfair Display', sans-serif;
+    color: black;
+    font-size: 25px;
+}
+
+.form {
+    color: black;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 25px;
 }
