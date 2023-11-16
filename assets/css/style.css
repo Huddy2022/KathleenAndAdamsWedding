@@ -21,6 +21,31 @@ body.venue {
     /* Semi-transparent white background for navbar */
 }
 
+.nav-link:hover {
+    color: rgb(194, 165, 0);
+}
+
+.rsvp {
+    font-family: 'Playfair Display', sans-serif;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(194, 165, 0);
+    border: 2px solid rgb(124, 106, 0);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.rsvp:hover {
+    color: rgb(194, 165, 0);
+    background-color: black;
+    border: 2px solid rgb(194, 165, 0);
+}
+
 /* index page */
 .header_logo {
     width: 100%;
