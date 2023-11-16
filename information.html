@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="index">
+<body class="information-background">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a class="navbar-brand" href="index.html"><img src="assets/images/home_logo.png" alt="Home Icon" width="250"
                 height="75"></a>
@@ -46,16 +46,38 @@
             </ul>
         </div>
     </nav>
-
-    <div class="container d-flex flex-column align-items-center justify-content-center vh-100">
+    <div class="container d-flex flex-column align-items-center justify-content-center">
         <!-- Logo Section -->
         <div class="text-center">
-            <img class="header_logo" src="assets/images/header_logo.png" alt="wedding logo">
+            <img class="information-logo" src="assets/images/information-logo.png" alt="information logo">
         </div>
-        <!-- Countdown Clock Section -->
-        <div class="container text-center mt-3">
-            <h2 class="gold-text fancy-countdown">Countdown to the Wedding</h2>
-            <div id="countdown" class="gold-text fancy-countdown"></div>
+        <div class="text-center date">
+            <p>14th June 2024</p>
+        </div>
+    </div>
+    <div class="container mt-5 information">
+        <div class="row text-center">
+            <!-- First container -->
+            <div class="col-md-4 information-container">
+                <img src="assets/images/invite-only-logo.png" alt="invite only" class="img-fluid mb-3">
+                <p>Unfortunately, we are not able to extend an invite to plus ones or children for this occasion.</p>
+            </div>
+
+            <!-- Second container -->
+            <div class="col-md-4 information-container">
+                <img src="assets/images/attire-logo.png" alt="attire" class="img-fluid mb-3">
+                <p>Cocktail / Formal (Ties Optional)</p>
+            </div>
+
+            <!-- Third container -->
+            <div class="col-md-4 information-container">
+                <img src="assets/images/photos-logo.png" alt="photos logo" class="img-fluid mb-3">
+                <p>We invite you to be fully present during our ceremony, so no phones or cameras are permitted during
+                    this time.
+                    However, we are more than happy for you to take photos after the ceremony and share them with your
+                    loved
+                    ones.</p>
+            </div>
         </div>
     </div>
 
@@ -65,39 +87,6 @@
         </div>
     </footer>
 
-
-
 </body>
-<!-- JavaScript for Countdown -->
-<script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("June 14, 2024 00:00:00").getTime();
-
-    // Update the countdown every 1 second
-    var x = setInterval(function () {
-
-        // Get the current date and time
-        var now = new Date().getTime();
-
-        // Calculate the remaining time
-        var distance = countDownDate - now;
-
-        // Calculate days, hours, minutes, and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Display the countdown
-        document.getElementById("countdown").innerHTML =
-            days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-        // If the countdown is over, display a message
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("countdown").innerHTML = "EXPIRED";
-        }
-    }, 1000);
-</script>
 
 </html>

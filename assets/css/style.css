@@ -14,6 +14,12 @@ body.venue {
     background-repeat: no-repeat;
 }
 
+body.information-background {
+    background-image: url('/assets/images/information-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .navbar {
     background-color: rgba(255, 255, 255, 0.5);
     font-weight: bold;
@@ -109,3 +115,25 @@ body.venue {
     border-radius: 10px;
 }
 
+/* Information page */
+
+.information-logo {
+    width: 100%;
+    margin-top: 120px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+}
+
+.date p {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    color: black;
+}
