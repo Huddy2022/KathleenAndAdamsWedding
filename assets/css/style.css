@@ -26,6 +26,12 @@ body.schedule {
     background-repeat: no-repeat;
 }
 
+body.wishing-well {
+    background-image: url('/assets/images/wishing-well-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .navbar {
     background-color: rgba(255, 255, 255, 0.5);
     font-weight: bold;
@@ -149,4 +155,11 @@ body.schedule {
 .schedule-timeline {
     width: 100%;
     margin-top: 130px;
+}
+
+/* wishing well */
+
+.wishing-logo {
+    width: 100%;
+    margin-top: 120px;
 }
