@@ -16,6 +16,12 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Playfair+Display:ital,wght@1,500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("dAeer_zSgV2AAmTIr");
+        })();
+    </script>
 </head>
 
 <body class="rsvp">
@@ -208,10 +214,12 @@
 
             // Prevent form submission
             return false;
+        } else {
+            return sendMail(this);
         }
 
         // If all validations pass, allow form submission
-        return true;
+        
     }
 
     // Function to close the message container and enable interactions
@@ -230,5 +238,6 @@
         }
     }
 </script>
+<script src="assets/js/sendEmail.js"></script>
 
 </html>
