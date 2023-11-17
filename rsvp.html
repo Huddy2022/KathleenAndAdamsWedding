@@ -74,13 +74,161 @@
                         <input type="text" class="form-control" id="lastName" name="lastName" required>
                     </div>
 
-                    <button type="submit" class="rsvp-btn">That's Me</button>
+                    <button type="button" class="rsvp-btn" onclick="showMenuOptions()">That's Me</button>
                 </form>
             </div>
             <div class="col-md-3"></div>
         </div>
     </div>
+    <!-- Menu Options Container -->
+    <div class="container mt-6">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 menu-options information accomodation-container form" style="display: none;">
+                <h2 class="text-center mb-4">Menu Options</h2>
 
+                <!-- Menu Checklist -->
+                <form action="#" method="post" class="text-center" onsubmit="return validateForm()">
+                    <div class="text-center">
+                        <img class="line-logo" src="assets/images/line.png" alt="line logo">
+                    </div>
+                    <!-- Starters -->
+                    <div class="mb-3">
+                        <h4>Starters</h4>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="starter" id="prawnSalad">
+                            <label class="form-check-label" for="prawnSalad">Prawn Salad with Marie Rose Sauce</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="starter" id="soup">
+                            <label class="form-check-label" for="soup">Tomato & Basil soup</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="starter" id="bruschetta">
+                            <label class="form-check-label" for="bruschetta">Bruschetta with Prosciutto, Mozzarella,
+                                Garlic, Red Onions, Tomatoes, Basil and Balsamic</label>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <img class="line-logo" src="assets/images/line.png" alt="line logo">
+                    </div>
+
+                    <!-- Mains -->
+                    <div class="mb-3">
+                        <h4>Mains</h4>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="main" id="trioOfSausage">
+                            <label class="form-check-label" for="trioOfSausage">Trio of Sausage; Farmhouse Pork, Pork
+                                and Apple and Cumberland Sausage, Jenga Chips & Roast Gravy</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="main" id="roastPork">
+                            <label class="form-check-label" for="roastPork">Roast Loin of Pork with Sage and Onion
+                                Stuffing, Yorkshire Pudding, Crackling, Dauphinoise Potatoes and Roast Gravy</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="main" id="roastLamb">
+                            <label class="form-check-label" for="roastLamb">Roast Leg of Lamb with Yorkshire Pudding,
+                                Dauphinoise Potatoes and Roast Gravy</label>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <img class="line-logo" src="assets/images/line.png" alt="line logo">
+                    </div>
+
+                    <!-- Desserts -->
+                    <div class="mb-3">
+                        <h4>Desserts</h4>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="dessert" id="stickyToffeePudding">
+                            <label class="form-check-label" for="stickyToffeePudding">Sticky Toffee Pudding, Toffee
+                                Sauce, and Vanilla Ice-cream</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="dessert" id="lemonMeringueCheesecake">
+                            <label class="form-check-label" for="lemonMeringueCheesecake">Heart Shaped Lemon Meringue
+                                Cheesecake with Meringue and Chocolate Shards</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="dessert" id="chocolateBrownie">
+                            <label class="form-check-label" for="chocolateBrownie">Warm Chocolate Brownie with Vanilla
+                                Ice-cream</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="rsvp-btn" id="submitBtn"
+                        onclick="return validateForm()">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <!-- HTML for the overlay and alert container -->
+    <div class="overlay" id="overlay">
+        <div class="alert" id="alert">
+            <p>Please select one option from each category (starter, main, dessert).</p>
+            <button type="button" class="rsvp-btn" onclick="closeMessage()">OK</button>
+        </div>
+    </div>
 </body>
+<script>
+    function showMenuOptions() {
+        // Show the menu options container
+        document.querySelector('.menu-options').style.display = 'block';
+
+        // Disable the input fields for first name and last name
+        document.getElementById('firstName').disabled = true;
+        document.getElementById('lastName').disabled = true;
+    }
+
+    function validateForm() {
+        // Check if at least one radio button is checked for each category
+        const startersChecked = document.querySelectorAll('input[name="starter"]:checked').length;
+        const mainsChecked = document.querySelectorAll('input[name="main"]:checked').length;
+        const dessertsChecked = document.querySelectorAll('input[name="dessert"]:checked').length;
+
+        if (startersChecked === 0 || mainsChecked === 0 || dessertsChecked === 0) {
+            // Display the overlay and alert
+            const overlay = document.querySelector('.overlay');
+            overlay.style.display = 'flex';
+
+            const alert = document.querySelector('.overlay .alert');
+            alert.style.display = 'block';
+
+            // Disable the submit button
+            document.getElementById('submitBtn').disabled = true;
+
+            // Prevent form submission
+            return false;
+        }
+
+        // If all validations pass, allow form submission
+        return true;
+    }
+
+    // Function to close the message container and enable interactions
+    function closeMessage() {
+        const overlay = document.querySelector('.overlay');
+        const alert = document.querySelector('.overlay .alert');
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (overlay && alert) {
+            // Hide the overlay and alert
+            overlay.style.display = 'none';
+            alert.style.display = 'none';
+
+            // Enable the submit button
+            submitBtn.disabled = false;
+        }
+    }
+</script>
 
 </html>
