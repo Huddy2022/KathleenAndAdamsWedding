@@ -3,22 +3,14 @@ function sendMail(rsvpForm) {
     var firstName = rsvpForm.firstName.value;
     var lastName = rsvpForm.lastName.value;
 
+    console.log(firstName, lastName);
+
     // Get selected values for starters, main, and dessert
     var starter = getSelectedValue('starter');
     var main = getSelectedValue('main');
     var dessert = getSelectedValue('dessert');
 
-    // Check if any radio button is not selected
-    if (!starter || !main || !dessert) {
-        // Handle the case where not all options are selected
-        showErrorMessage();
-        return false;
-    }
-
-    // Get the values from the selected radio buttons
-    starter = starter.value;
-    main = main.value;
-    dessert = dessert.value;
+    console.log(starter, main, dessert);
 
     // Compose email data
     var emailData = {
@@ -27,10 +19,9 @@ function sendMail(rsvpForm) {
         user_id: 'dAeer_zSgV2AAmTIr',
         template_params: {
             'from_name': firstName + ' ' + lastName,
-            'RSVP Details': `
-                Starter: ${starter}
-                Main: ${main}
-                Dessert: ${dessert}`
+            'starter': starter,
+            'main': main,
+            'dessert': dessert
         }
     };
 
@@ -58,5 +49,5 @@ function sendMail(rsvpForm) {
 // Function to get the selected value for a group of radio buttons
 function getSelectedValue(groupName) {
     var selectedElement = document.querySelector('input[name="' + groupName + '"]:checked');
-    return selectedElement ? selectedElement.value : null;
+    return selectedElement ? selectedElement.id : null;
 }
