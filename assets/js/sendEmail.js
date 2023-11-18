@@ -10,6 +10,8 @@ function sendMail(rsvpForm) {
     var main = getSelectedValue('main');
     var dessert = getSelectedValue('dessert');
 
+    var additionalComments = rsvpForm.additionalComments.value;
+
     console.log(starter, main, dessert);
 
     // Compose email data
@@ -21,7 +23,8 @@ function sendMail(rsvpForm) {
             'from_name': firstName + ' ' + lastName,
             'starter': starter,
             'main': main,
-            'dessert': dessert
+            'dessert': dessert,
+            'additionalComments': additionalComments
         }
     };
 

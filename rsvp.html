@@ -80,7 +80,8 @@
                         <input type="text" class="form-control" id="lastName" name="lastName" required>
                     </div>
 
-                    <button type="button" class="rsvp-btn" id="rsvp-btn-thats-me" onclick="showMenuOptions()">That's Me</button>
+                    <button type="button" class="rsvp-btn" id="rsvp-btn-thats-me" onclick="showMenuOptions()">That's
+                        Me</button>
                 </form>
             </div>
             <div class="col-md-3"></div>
@@ -100,7 +101,7 @@
                     </div>
                     <!-- Starters -->
                     <div class="mb-3">
-                        <h4>Starters</h4>
+                        <h4><strong>Starters</strong></h4>
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="radio" name="starter" id="prawnSalad">
                             <label class="form-check-label" for="prawnSalad">Prawn Salad with Marie Rose Sauce</label>
@@ -124,7 +125,7 @@
 
                     <!-- Mains -->
                     <div class="mb-3">
-                        <h4>Mains</h4>
+                        <h4><strong>Mains</strong></h4>
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="radio" name="main" id="trioOfSausage">
                             <label class="form-check-label" for="trioOfSausage">Trio of Sausage; Farmhouse Pork, Pork
@@ -150,7 +151,7 @@
 
                     <!-- Desserts -->
                     <div class="mb-3">
-                        <h4>Desserts</h4>
+                        <h4><strong>Desserts</strong></h4>
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="radio" name="dessert" id="stickyToffeePudding">
                             <label class="form-check-label" for="stickyToffeePudding">Sticky Toffee Pudding, Toffee
@@ -168,6 +169,15 @@
                             <label class="form-check-label" for="chocolateBrownie">Warm Chocolate Brownie with Vanilla
                                 Ice-cream</label>
                         </div>
+                    </div>
+                    <div class="text-center">
+                        <img class="line-logo" src="assets/images/line.png" alt="line logo">
+                    </div>
+                    <!-- Additional text area for comments/requests -->
+                    <div class="mb-3">
+                        <label for="additionalComments" class="form-label">Additional Comments / Dietary Requests</label>
+                        <textarea class="form-control" id="additionalComments" name="additionalComments"
+                            rows="4"></textarea>
                     </div>
 
                     <button type="submit" class="rsvp-btn" id="submitBtn"
@@ -217,7 +227,7 @@
             // Prevent form submission
             return false;
         } else {
-            // Disable the input fields for first name and last name
+            // Disable the input fields for starters, main and desserts
             document.getElementById('prawnSalad').disabled = true;
             document.getElementById('soup').disabled = true;
             document.getElementById('bruschetta').disabled = true;
@@ -229,6 +239,8 @@
             document.getElementById('chocolateBrownie').disabled = true;
             // Disable the submit button
             document.getElementById('submitBtn').disabled = true;
+            // Disable the textarea
+            document.getElementById('additionalComments').disabled = true;
             return sendMail(this);
         }
 
