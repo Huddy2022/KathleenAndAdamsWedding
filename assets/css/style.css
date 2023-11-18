@@ -33,7 +33,7 @@ body.wishing-well {
 }
 
 body.rsvp {
-    background-image: url('/assets/images/wishing-well-background.jpg');
+    background-image: url('/assets/images/rsvp-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
