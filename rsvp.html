@@ -80,7 +80,7 @@
                         <input type="text" class="form-control" id="lastName" name="lastName" required>
                     </div>
 
-                    <button type="button" class="rsvp-btn" onclick="showMenuOptions()">That's Me</button>
+                    <button type="button" class="rsvp-btn" id="rsvp-btn-thats-me" onclick="showMenuOptions()">That's Me</button>
                 </form>
             </div>
             <div class="col-md-3"></div>
@@ -193,6 +193,8 @@
         // Disable the input fields for first name and last name
         document.getElementById('firstName').disabled = true;
         document.getElementById('lastName').disabled = true;
+
+        document.getElementById('rsvp-btn-thats-me').disabled = true;
     }
 
     function validateForm() {
@@ -215,11 +217,23 @@
             // Prevent form submission
             return false;
         } else {
+            // Disable the input fields for first name and last name
+            document.getElementById('prawnSalad').disabled = true;
+            document.getElementById('soup').disabled = true;
+            document.getElementById('bruschetta').disabled = true;
+            document.getElementById('trioOfSausage').disabled = true;
+            document.getElementById('roastPork').disabled = true;
+            document.getElementById('roastLamb').disabled = true;
+            document.getElementById('stickyToffeePudding').disabled = true;
+            document.getElementById('lemonMeringueCheesecake').disabled = true;
+            document.getElementById('chocolateBrownie').disabled = true;
+            // Disable the submit button
+            document.getElementById('submitBtn').disabled = true;
             return sendMail(this);
         }
 
         // If all validations pass, allow form submission
-        
+
     }
 
     // Function to close the message container and enable interactions

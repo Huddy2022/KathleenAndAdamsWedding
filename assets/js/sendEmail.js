@@ -51,3 +51,37 @@ function getSelectedValue(groupName) {
     var selectedElement = document.querySelector('input[name="' + groupName + '"]:checked');
     return selectedElement ? selectedElement.id : null;
 }
+
+// Function to show success message in a container and redirect to index.html
+function showSuccessMessage() {
+    // Create a container for the success message
+    var successContainer = document.createElement('div');
+    successContainer.className = 'success-container';
+    
+    // Create the success message
+    var successMessage = document.createElement('p');
+    successMessage.textContent = 'RSVP submitted successfully!';
+    
+    // Create the OK button
+    var okButton = document.createElement('button');
+    okButton.textContent = 'OK';
+    okButton.className = 'rsvp-btn';
+    okButton.onclick = function () {
+        // Redirect to index.html
+        window.location.href = 'index.html';
+    };
+
+    // Append the elements to the container
+    successContainer.appendChild(successMessage);
+    successContainer.appendChild(okButton);
+
+    // Append the container to the body
+    document.body.appendChild(successContainer);
+}
+
+
+// Function to show error message
+function showErrorMessage() {
+    // You can customize this function to display an error message to the user
+    alert('RSVP submission failed. Please try again.');
+}
