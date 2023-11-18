@@ -283,7 +283,17 @@ li {
 /* media queries */
 
 @media(max-width: 480px) {
-    .navbar-brand img{
+    .navbar-brand img {
         width: 80%;
+    }
+}
+
+@media(max-width: 350px) {
+    .header_logo {
+        margin-top: 110px;
+    }
+
+    .rsvp-btn {
+        margin-top: 10px;
     }
 }
