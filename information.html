@@ -20,30 +20,40 @@
 
 <body class="information-background">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <a class="navbar-brand" href="index.html"><img src="assets/images/home_logo.png" alt="Home Icon" width="250"
-                height="75"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="venue.html">The Venue</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="information.html">Information</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="schedule.html">Schedule</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="wishing-well.html">Wishing Well</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="rsvp.html">RSVP</a>
-                </li>
-            </ul>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/home_logo.png" alt="Home Icon" width="250"
+                    height="75"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"
+                aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas"
+                aria-labelledby="navbarOffcanvasLabel">
+                <!-- Your offcanvas content goes here -->
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="navbarOffcanvasLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="venue.html">The Venue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="information.html">Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="schedule.html">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="wishing-well.html">Wishing Well</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rsvp.html">RSVP</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </nav>
     <div class="container d-flex flex-column align-items-center justify-content-center">
@@ -105,7 +115,9 @@
             <button href="rsvp.html" class="rsvp-btn">RSVP by 19th February 2024</button>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
