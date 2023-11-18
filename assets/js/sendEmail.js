@@ -57,14 +57,16 @@ function getSelectedValue(groupName) {
 
 // Function to show success message in a container and redirect to index.html
 function showSuccessMessage() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
     // Create a container for the success message
     var successContainer = document.createElement('div');
     successContainer.className = 'success-container';
-    
+
     // Create the success message
     var successMessage = document.createElement('p');
-    successMessage.textContent = 'RSVP submitted successfully!';
-    
+    successMessage.textContent = 'RSVP sent successfully.\nWe look forward to celebrating with you, ' + firstName + ' ' + lastName + '!';
+
     // Create the OK button
     var okButton = document.createElement('button');
     okButton.textContent = 'OK';
