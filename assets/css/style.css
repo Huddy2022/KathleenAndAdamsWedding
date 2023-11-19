@@ -457,7 +457,7 @@ li {
     }
 }
 
-@media(max-width: 307px) {
+@media(max-width: 325px) {
     .navbar-brand img {
         width: 120px;
         height: 50px;
