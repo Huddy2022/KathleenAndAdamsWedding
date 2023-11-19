@@ -22,8 +22,20 @@ body.information-background {
 
 body.schedule {
     background-image: url('/assets/images/schedule-background.jpg');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+    background-size: 100%, auto;
+    background-repeat: repeat;
+}
+
+body.schedule::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/images/schedule-background.jpg') repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
 body.wishing-well {
@@ -32,10 +44,34 @@ body.wishing-well {
     background-repeat: no-repeat;
 }
 
+body.wishing-well::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/images/wishing-well-background.jpg') repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
 body.rsvp {
     background-image: url('/assets/images/rsvp-background.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+}
+
+body.rsvp::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/images/rsvp-background.jpg') repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
 .navbar {
@@ -46,6 +82,11 @@ body.rsvp {
 }
 
 .nav-link:hover {
+    color: rgb(194, 165, 0);
+}
+
+.offcanvas-title {
+    font-family: 'Playfair Display', sans-serif;
     color: rgb(194, 165, 0);
 }
 
@@ -225,7 +266,7 @@ li {
     z-index: 1000;
 }
 
-.overlay .alert {
+.alert {
     display: none;
     font-family: 'Playfair Display', sans-serif;
     background: #fff;
@@ -282,15 +323,98 @@ li {
 
 /* media queries */
 
+@media(max-width: 1200px) {
+    .information-container p {
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 990px) {
+    .header_logo {
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+    }
+
+    .information p,
+    .information li {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 775px) {
+
+    .schedule-timeline {
+        margin-top: 110px;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+    }
+
+    .rsvp-logo,
+    .rsvp-date {
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .rsvp-date p {
+        margin-bottom: 0px;
+    }
+
+    .rsvp-header {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media(max-width: 575px) {
+
+    .venue-container,
+    .info-container,
+    .wishing-well-container,
+    .rsvp-container {
+        max-width: 85%;
+    }
+
+    .information p,
+    .information li {
+        font-size: 15px;
+    }
+}
+
 @media(max-width: 480px) {
     .navbar-brand img {
         width: 80%;
+    }
+
+    .information p,
+    .information li {
+        font-size: 15px;
+    }
+
+    .hotel-btn {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+
+    .rsvp-btn {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .rsvp-date p {
+        font-size: 15px;
     }
 }
 
 @media(max-width: 350px) {
     .header_logo {
-        margin-top: 110px;
+        margin-top: 135px;
     }
 
     .rsvp-btn {

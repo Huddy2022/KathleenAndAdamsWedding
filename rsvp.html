@@ -37,7 +37,7 @@
                 aria-labelledby="navbarOffcanvasLabel">
                 <!-- Your offcanvas content goes here -->
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="navbarOffcanvasLabel">Menu</h5>
+                    <h5 class="offcanvas-title" id="navbarOffcanvasLabel">Kathleen & Adam</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -64,14 +64,14 @@
     </nav>
     <div class="container d-flex flex-column align-items-center justify-content-center">
         <!-- Logo Section -->
-        <div class="text-center">
+        <div class="text-center rsvp-header">
             <img class="rsvp-logo" src="assets/images/rsvp-logo.png" alt="rsvp logo">
         </div>
         <div class="text-center rsvp-date">
             <p>14th June 2024</p>
         </div>
     </div>
-    <div class="container mt-6">
+    <div class="container mt-6 rsvp-container">
         <div class="row">
             <!-- First container -->
             <div class="col-md-3"></div>
@@ -98,7 +98,7 @@
         </div>
     </div>
     <!-- Menu Options Container -->
-    <div class="container mt-6">
+    <div class="container mt-6 rsvp-container">
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6 menu-options information accomodation-container form" style="display: none;">
@@ -202,10 +202,12 @@
             <div class="col-md-3"></div>
         </div>
     </div>
-    <div class="container d-flex flex-column align-items-center justify-content-center contact">
+    <div class="container col-md-4 d-flex flex-column align-items-center justify-content-center contact rsvp-container">
         <div class="text-center">
-            <p>Any issues RSVPing or any queries, please don't hesitate to <a
-                    href="mailto:hudsonadam2011@gmail.com">contact us</a>.</p>
+            <p>RSVP by 19th February 2024 <a href="mailto:hudsonadam2011@gmail.com">contact us</a> if unable to attend
+                so we can confirm numbers with the venue. Unfortunatley if you do not respond by 19th February 2024, we
+                will be unable to cater for you, therfore unfortunatley you wont be able to join us for our marriage.
+            </p>
         </div>
     </div>
     <!-- HTML for the overlay and alert container -->
@@ -214,6 +216,11 @@
             <p>Please select one option from each category (starter, main, dessert).</p>
             <button type="button" class="rsvp-btn" onclick="closeMessage()">OK</button>
         </div>
+        <!-- Additional container for first and last name alert -->
+        <div class="alert" id="nameAlert">
+            <p>Please enter both first name and last name before proceeding.</p>
+            <button type="button" class="rsvp-btn" onclick="closeNameAlert()">OK</button>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
@@ -221,14 +228,31 @@
 </body>
 <script>
     function showMenuOptions() {
-        // Show the menu options container
-        document.querySelector('.menu-options').style.display = 'block';
+        // Get the values from the input fields
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
 
-        // Disable the input fields for first name and last name
-        document.getElementById('firstName').disabled = true;
-        document.getElementById('lastName').disabled = true;
+        // Check if both first name and last name are not empty
+        if (firstName.trim() !== '' && lastName.trim() !== '') {
+            // Show the menu options container
+            document.querySelector('.menu-options').style.display = 'block';
 
-        document.getElementById('rsvp-btn-thats-me').disabled = true;
+            // Disable the input fields for first name and last name
+            document.getElementById('firstName').disabled = true;
+            document.getElementById('lastName').disabled = true;
+
+            document.getElementById('rsvp-btn-thats-me').disabled = true;
+        } else {
+            // If either first name or last name is empty, show the name alert
+            const overlay = document.querySelector('.overlay');
+            const nameAlertContainer = document.querySelector('.overlay #nameAlert');
+
+            if (overlay && nameAlertContainer) {
+                // Display the overlay and name alert container
+                overlay.style.display = 'flex';
+                nameAlertContainer.style.display = 'block';
+            }
+        }
     }
 
     function validateForm() {
@@ -268,7 +292,6 @@
             return sendMail(this);
         }
 
-        // If all validations pass, allow form submission
 
     }
 
@@ -282,6 +305,22 @@
             // Hide the overlay and alert
             overlay.style.display = 'none';
             alert.style.display = 'none';
+
+            // Enable the submit button
+            submitBtn.disabled = false;
+        }
+    }
+
+    // Function to close the name alert container and enable interactions
+    function closeNameAlert() {
+        const overlay = document.querySelector('.overlay');
+        const nameAlertContainer = document.querySelector('.overlay #nameAlert');
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (overlay && nameAlertContainer) {
+            // Hide the overlay and name alert container
+            overlay.style.display = 'none';
+            nameAlertContainer.style.display = 'none';
 
             // Enable the submit button
             submitBtn.disabled = false;
