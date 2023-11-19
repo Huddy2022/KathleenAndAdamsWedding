@@ -3,25 +3,25 @@ body {
 }
 
 body.index {
-    background-image: url('/assets/images/background.jpg');
+    background-image: url('../images/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 body.venue {
-    background-image: url('/assets/images/ashes.png');
+    background-image: url('../images/ashes.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 body.information-background {
-    background-image: url('/assets/images/information-background.jpg');
+    background-image: url('../images/information-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 body.schedule {
-    background-image: url('/assets/images/schedule-background.jpg');
+    background-image: url('../images/schedule-background.jpg');
     background-size: 100%, auto;
     background-repeat: repeat;
 }
@@ -33,13 +33,13 @@ body.schedule::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/assets/images/schedule-background.jpg') repeat;
+    background: url('../images/schedule-background.jpg') repeat;
     background-size: cover;
     z-index: -1;
 }
 
 body.wishing-well {
-    background-image: url('/assets/images/wishing-well-background.jpg');
+    background-image: url('../images/wishing-well-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -51,13 +51,13 @@ body.wishing-well::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/assets/images/wishing-well-background.jpg') repeat;
+    background: url('../images/wishing-well-background.jpg') repeat;
     background-size: cover;
     z-index: -1;
 }
 
 body.rsvp {
-    background-image: url('/assets/images/rsvp-background.jpg');
+    background-image: url('../images/rsvp-background.jpg');
     background-size: cover;
     background-repeat: repeat;
 }
@@ -69,7 +69,7 @@ body.rsvp::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/assets/images/rsvp-background.jpg') repeat;
+    background: url('../images/rsvp-background.jpg') repeat;
     background-size: cover;
     z-index: -1;
 }
@@ -292,7 +292,7 @@ li {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-image: url('/assets/images/rsvp-background.jpg');
+    background-image: url('../images/rsvp-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Playfair Display', sans-serif;
