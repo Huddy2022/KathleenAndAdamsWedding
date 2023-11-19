@@ -113,6 +113,14 @@ body.rsvp::before {
     border-radius: 10px;
 }
 
+#speaker {
+    position: fixed;
+    top: 28px;
+    left: 250px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
 /* index page */
 .header_logo {
     width: 100%;
@@ -425,6 +433,10 @@ li {
 
     .success-container p {
         font-size: 15px;
+    }
+
+    #speaker {
+        left: 170px;
     }
 }
 

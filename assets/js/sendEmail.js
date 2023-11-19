@@ -3,16 +3,12 @@ function sendMail(rsvpForm) {
     var firstName = rsvpForm.firstName.value;
     var lastName = rsvpForm.lastName.value;
 
-    console.log(firstName, lastName);
-
     // Get selected values for starters, main, and dessert
     var starter = getSelectedValue('starter');
     var main = getSelectedValue('main');
     var dessert = getSelectedValue('dessert');
 
     var additionalComments = rsvpForm.additionalComments.value;
-
-    console.log(starter, main, dessert);
 
     // Compose email data
     var emailData = {
@@ -31,16 +27,10 @@ function sendMail(rsvpForm) {
     // Send email using email.js
     emailjs.send(emailData.service_id, emailData.template_id, emailData.template_params, emailData.user_id)
         .then(
-            function (response) {
-                console.log('SUCCESS', response);
-                // You can add further actions after successful submission
-                // For example, show a success message to the user
+            function () {
                 showSuccessMessage();
             },
-            function (error) {
-                console.log('FAILED', error);
-                // You can handle errors here
-                // For example, show an error message to the user
+            function () {
                 showErrorMessage();
             }
         );
