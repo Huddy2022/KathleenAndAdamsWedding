@@ -385,6 +385,14 @@ li {
     .information li {
         font-size: 15px;
     }
+
+    .alert {
+        max-width: 85%;
+    }
+
+    .rsvp-container label {
+        font-size: 15px;
+    }
 }
 
 @media(max-width: 480px) {
@@ -408,6 +416,14 @@ li {
     }
 
     .rsvp-date p {
+        font-size: 15px;
+    }
+
+    .alert p {
+        font-size: 15px;
+    }
+
+    .success-container p {
         font-size: 15px;
     }
 }
