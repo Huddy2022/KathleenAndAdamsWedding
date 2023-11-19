@@ -447,7 +447,7 @@ li {
     }
 }
 
-@media(max-width: 390px) {
+@media(max-width: 395px) {
     .header_logo {
         margin-top: 135px;
     }
