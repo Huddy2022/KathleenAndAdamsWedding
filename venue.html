@@ -16,6 +16,34 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Playfair+Display:ital,wght@1,500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener("visibilitychange", function () {
+            if (document.hidden) {
+                // Page is hidden, pause the music
+                pauseMusic();
+            } else {
+                // Page is visible, resume the music
+                playMusic();
+            }
+        });
+
+        function playMusic() {
+            var audio = document.getElementById('backgroundMusic');
+            if (audio.paused) {
+                audio.play();
+            }
+        }
+
+        function pauseMusic() {
+            var audio = document.getElementById('backgroundMusic');
+            if (!audio.paused) {
+                audio.pause();
+            }
+        }
+
+        // Set initial volume
+        document.getElementById('backgroundMusic').volume = 0.5;
+    </script>
 </head>
 
 <body class="venue">
