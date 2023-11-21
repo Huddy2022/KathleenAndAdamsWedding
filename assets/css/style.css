@@ -446,6 +446,10 @@ li {
         font-size: 15px;
     }
 
+    #speaker img{
+        width: 30px;
+    }
+
 }
 
 @media(max-width: 395px) {
