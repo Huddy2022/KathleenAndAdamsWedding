@@ -7,7 +7,7 @@
     <title>Kathleen & Adam's Wedding</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,6 @@
                 audio.pause();
             }
         }
-
     </script>
 </head>
 
@@ -105,29 +104,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
-</body>
-<script>
-    function toggleMusic() {
-        var audio = document.getElementById('backgroundMusic');
+    <script>
+        function toggleMusic() {
+            var audio = document.getElementById('backgroundMusic');
 
-        if (audio.paused) {
-            audio.play();
-        } else {
-            audio.pause();
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
         }
-    }
-    document.getElementById('backgroundMusic').volume = 0.3;
+        document.getElementById('backgroundMusic').volume = 0.3;
 
-    // Add event listeners for burger icon and close button
-    document.querySelector('.navbar-toggler').addEventListener('click', function () {
-        // Burger icon clicked
-        document.getElementById('speaker').style.visibility = 'hidden';
-    });
+        // Add event listeners for burger icon and close button
+        document.querySelector('.navbar-toggler').addEventListener('click', function () {
+            // Burger icon clicked
+            document.getElementById('speaker').style.visibility = 'hidden';
+        });
 
-    document.querySelector('.btn-close').addEventListener('click', function () {
-        // Close button clicked
-        document.getElementById('speaker').style.visibility = 'visible';
-    });
-</script>
+        document.querySelector('.btn-close').addEventListener('click', function () {
+            // Close button clicked
+            document.getElementById('speaker').style.visibility = 'visible';
+        });
+    </script>
+</body>
+
 
 </html>

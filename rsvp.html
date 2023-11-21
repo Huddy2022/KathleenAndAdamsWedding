@@ -7,7 +7,7 @@
     <title>Kathleen & Adam's Wedding</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,6 @@
                 audio.pause();
             }
         }
-
     </script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
@@ -232,7 +231,7 @@
         <div class="text-center">
             <p>RSVP by 19th February 2024 <a href="mailto:hudsonadam2011@gmail.com">contact us</a> if unable to attend
                 so we can confirm numbers with the venue. Unfortunatley if you do not respond by 19th February 2024, we
-                will be unable to cater for you, therfore unfortunatley you wont be able to join us for our wedding breakfast.
+                will be unable to cater for you, therfore unfortunatley you wont be able to join us for our marriage.
             </p>
         </div>
     </div>
@@ -263,130 +262,131 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
-</body>
-<script>
-    function showMenuOptions() {
-        // Get the values from the input fields
-        const firstName = document.getElementById('firstName').value;
-        const lastName = document.getElementById('lastName').value;
+    <script>
+        function showMenuOptions() {
+            // Get the values from the input fields
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
 
-        // Check if both first name and last name are not empty
-        if (firstName.trim() !== '' && lastName.trim() !== '') {
-            // Show the menu options container
-            document.querySelector('.menu-options').style.display = 'block';
+            // Check if both first name and last name are not empty
+            if (firstName.trim() !== '' && lastName.trim() !== '') {
+                // Show the menu options container
+                document.querySelector('.menu-options').style.display = 'block';
 
-            // Disable the input fields for first name and last name
-            document.getElementById('firstName').disabled = true;
-            document.getElementById('lastName').disabled = true;
+                // Disable the input fields for first name and last name
+                document.getElementById('firstName').disabled = true;
+                document.getElementById('lastName').disabled = true;
 
-            document.getElementById('rsvp-btn-thats-me').disabled = true;
-        } else {
-            // If either first name or last name is empty, show the name alert
-            const overlay = document.querySelector('.overlay');
-            const nameAlertContainer = document.querySelector('.overlay #nameAlert');
+                document.getElementById('rsvp-btn-thats-me').disabled = true;
+            } else {
+                // If either first name or last name is empty, show the name alert
+                const overlay = document.querySelector('.overlay');
+                const nameAlertContainer = document.querySelector('.overlay #nameAlert');
 
-            if (overlay && nameAlertContainer) {
-                // Display the overlay and name alert container
-                overlay.style.display = 'flex';
-                nameAlertContainer.style.display = 'block';
+                if (overlay && nameAlertContainer) {
+                    // Display the overlay and name alert container
+                    overlay.style.display = 'flex';
+                    nameAlertContainer.style.display = 'block';
+                }
             }
         }
-    }
 
-    function validateForm() {
-        // Check if at least one radio button is checked for each category
-        const startersChecked = document.querySelectorAll('input[name="starter"]:checked').length;
-        const mainsChecked = document.querySelectorAll('input[name="main"]:checked').length;
-        const dessertsChecked = document.querySelectorAll('input[name="dessert"]:checked').length;
+        function validateForm() {
+            // Check if at least one radio button is checked for each category
+            const startersChecked = document.querySelectorAll('input[name="starter"]:checked').length;
+            const mainsChecked = document.querySelectorAll('input[name="main"]:checked').length;
+            const dessertsChecked = document.querySelectorAll('input[name="dessert"]:checked').length;
 
-        if (startersChecked === 0 || mainsChecked === 0 || dessertsChecked === 0) {
-            // Display the overlay and alert
+            if (startersChecked === 0 || mainsChecked === 0 || dessertsChecked === 0) {
+                // Display the overlay and alert
+                const overlay = document.querySelector('.overlay');
+                overlay.style.display = 'flex';
+
+                const alert = document.querySelector('.overlay .alert');
+                alert.style.display = 'block';
+
+                // Disable the submit button
+                document.getElementById('submitBtn').disabled = true;
+
+                // Prevent form submission
+                return false;
+            } else {
+                // Disable the input fields for starters, main and desserts
+                document.getElementById('prawnSalad').disabled = true;
+                document.getElementById('soup').disabled = true;
+                document.getElementById('bruschetta').disabled = true;
+                document.getElementById('trioOfSausage').disabled = true;
+                document.getElementById('roastPork').disabled = true;
+                document.getElementById('roastLamb').disabled = true;
+                document.getElementById('stickyToffeePudding').disabled = true;
+                document.getElementById('lemonMeringueCheesecake').disabled = true;
+                document.getElementById('chocolateBrownie').disabled = true;
+                // Disable the submit button
+                document.getElementById('submitBtn').disabled = true;
+                // Disable the textarea
+                document.getElementById('additionalComments').disabled = true;
+                return sendMail(this);
+            }
+
+
+        }
+
+        // Function to close the message container and enable interactions
+        function closeMessage() {
             const overlay = document.querySelector('.overlay');
-            overlay.style.display = 'flex';
-
             const alert = document.querySelector('.overlay .alert');
-            alert.style.display = 'block';
+            const submitBtn = document.getElementById('submitBtn');
 
-            // Disable the submit button
-            document.getElementById('submitBtn').disabled = true;
+            if (overlay && alert) {
+                // Hide the overlay and alert
+                overlay.style.display = 'none';
+                alert.style.display = 'none';
 
-            // Prevent form submission
-            return false;
-        } else {
-            // Disable the input fields for starters, main and desserts
-            document.getElementById('prawnSalad').disabled = true;
-            document.getElementById('soup').disabled = true;
-            document.getElementById('bruschetta').disabled = true;
-            document.getElementById('trioOfSausage').disabled = true;
-            document.getElementById('roastPork').disabled = true;
-            document.getElementById('roastLamb').disabled = true;
-            document.getElementById('stickyToffeePudding').disabled = true;
-            document.getElementById('lemonMeringueCheesecake').disabled = true;
-            document.getElementById('chocolateBrownie').disabled = true;
-            // Disable the submit button
-            document.getElementById('submitBtn').disabled = true;
-            // Disable the textarea
-            document.getElementById('additionalComments').disabled = true;
-            return sendMail(this);
+                // Enable the submit button
+                submitBtn.disabled = false;
+            }
         }
 
+        // Function to close the name alert container and enable interactions
+        function closeNameAlert() {
+            const overlay = document.querySelector('.overlay');
+            const nameAlertContainer = document.querySelector('.overlay #nameAlert');
+            const submitBtn = document.getElementById('submitBtn');
 
-    }
+            if (overlay && nameAlertContainer) {
+                // Hide the overlay and name alert container
+                overlay.style.display = 'none';
+                nameAlertContainer.style.display = 'none';
 
-    // Function to close the message container and enable interactions
-    function closeMessage() {
-        const overlay = document.querySelector('.overlay');
-        const alert = document.querySelector('.overlay .alert');
-        const submitBtn = document.getElementById('submitBtn');
-
-        if (overlay && alert) {
-            // Hide the overlay and alert
-            overlay.style.display = 'none';
-            alert.style.display = 'none';
-
-            // Enable the submit button
-            submitBtn.disabled = false;
+                // Enable the submit button
+                submitBtn.disabled = false;
+            }
         }
-    }
 
-    // Function to close the name alert container and enable interactions
-    function closeNameAlert() {
-        const overlay = document.querySelector('.overlay');
-        const nameAlertContainer = document.querySelector('.overlay #nameAlert');
-        const submitBtn = document.getElementById('submitBtn');
+        function toggleMusic() {
+            var audio = document.getElementById('backgroundMusic');
 
-        if (overlay && nameAlertContainer) {
-            // Hide the overlay and name alert container
-            overlay.style.display = 'none';
-            nameAlertContainer.style.display = 'none';
-
-            // Enable the submit button
-            submitBtn.disabled = false;
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
         }
-    }
+        document.getElementById('backgroundMusic').volume = 0.3;
 
-    function toggleMusic() {
-        var audio = document.getElementById('backgroundMusic');
+        // Add event listeners for burger icon and close button
+        document.querySelector('.navbar-toggler').addEventListener('click', function () {
+            // Burger icon clicked
+            document.getElementById('speaker').style.visibility = 'hidden';
+        });
 
-        if (audio.paused) {
-            audio.play();
-        } else {
-            audio.pause();
-        }
-    }
-    document.getElementById('backgroundMusic').volume = 0.3;
+        document.querySelector('.btn-close').addEventListener('click', function () {
+            // Close button clicked
+            document.getElementById('speaker').style.visibility = 'visible';
+        });
+    </script>
+    <script src="assets/js/sendEmail.js"></script>
+</body>
 
-    // Add event listeners for burger icon and close button
-    document.querySelector('.navbar-toggler').addEventListener('click', function () {
-        // Burger icon clicked
-        document.getElementById('speaker').style.visibility = 'hidden';
-    });
-
-    document.querySelector('.btn-close').addEventListener('click', function () {
-        // Close button clicked
-        document.getElementById('speaker').style.visibility = 'visible';
-    });
-</script>
-<script src="assets/js/sendEmail.js"></script>
 
 </html>
