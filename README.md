@@ -1,110 +1,148 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Kathleen & Adams Wedding Website
 
-Welcome Huddy2022,
+![Wedding Responsive Image]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Live Link
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The live website can be found [here](https://huddy2022.github.io/KathleenAndAdamsWedding/).
 
-## Gitpod Reminders
+## Overview
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Welcome to the Kathleen & Adams Wedding Website! This platform serves as an online hub for all information related to Kathleen and Adams' wedding celebration. Users can explore various sections, including the home page, details about the wedding, and other relevant information. The website is designed to provide an engaging and informative experience for guests and well-wishers.
 
-`python3 -m http.server`
+## Features
 
-A blue button should appear to click: _Make Public_,
+### Navigation
 
-Another blue button should appear to click: _Open Browser_.
+The navigation menu is crafted for user-friendliness, employing responsive design principles. It ensures easy access to different sections of the website.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- **Home**
+- **The Venue**
+- **Information**
+- **Schedule**
+- **Wishing Well**
+- **RSVP**
 
-A blue button should appear to click: _Make Public_,
+### Home
 
-Another blue button should appear to click: _Open Browser_.
+The home page welcomes you with a captivating image or logo related to our wedding, creating an inviting atmosphere that sets the tone for the celebration. Below the image, a countdown clock dynamically displays the time remaining until the ceremony. Additionally, a prominent RSVP by date button and a speaker toggle button for music control are accessible on all pages, except the RSVP page, where only the speaker button is available.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### The Venue
 
-To log into the Heroku toolbelt CLI:
+The venue page is divided into two containers: one detailing nearby accommodations with direct links to hotel websites, and the other providing essential parking information. Explore a variety of lodging options and plan for on-site or nearby parking.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Information
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The Information page outlines crucial details for our June 14th, 2024 wedding celebration. It addresses our child attendance policy, specifying that, unfortunately, we can only accommodate our own children. The dress code is Cocktail/Formal, and we kindly request privacy regarding photography, urging guests not to share images of our children on social media. Your cooperation is appreciated. Please RSVP by February 19th, 2024.
 
-------
+### Schedule
 
-## Release History
+The Schedule page serves as a focal point for crucial details surrounding the wedding celebration. Access key information such as the event date, time, and location. Furthermore, this section provides valuable insights into accommodations and transportation options, aiding guests in their event preparations.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Displayed on the Schedule page is a visually engaging timeline that outlines the sequential order of events. From guest arrival and seating to the ceremony, drinks reception, wedding breakfast, speeches, cake cutting, first dance, evening refreshments, and concluding with the end of music and transportation arrangements, the timeline offers a comprehensive overview of the wedding festivities.
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Wishing Well
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+The Wishing Well page conveys our heartfelt gratitude for your presence at our celebration. While your love and laughter are the greatest gifts, should you wish to contribute, we will have a honeymoon wishing well available on the day. Your support in helping us create new experiences and cherished memories is genuinely appreciated.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### RSVP
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The "RSVP" page is where you can confirm your attendance and provide additional details for our wedding. Begin by entering your first and last name, then proceed to select your menu options for starters, mains, and desserts. Feel free to share any additional comments or dietary requests in the provided text area. Please ensure you submit your RSVP by the 19th of February 2024. If you encounter any difficulties or have questions, contact us. Your presence on our special day means the world to us.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Email JS
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The RSVP page incorporates Email.js to seamlessly collect and process RSVP submissions. When guests complete the form, including their first and last names, selected menu options for starters, mains, and desserts, and any additional messages or dietary requests, Email.js handles the submission process. The provided information is securely sent to my email address to ensure a smooth and organized response collection.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Alerts
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+To enhance the user experience, the RSVP page features helpful alerts that guide guests through the form submission process. If a user attempts to submit the form without completing essential fields, such as the first and last name, or neglects to choose menu options for starters, mains, and desserts, an alert will appear. These alerts ensure that guests are aware of any missed details and provide specific instructions on how to proceed. For example, if the user forgets to enter their name, a prompt will guide them to input both their first and last names before continuing. These alerts aim to streamline the RSVP process and assist guests in providing comprehensive and accurate information.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Contact Us
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+The Contact Us link on the RSVP page serves as a direct channel for guests to reach out in case of any challenges or if they are unable to attend. Designed to streamline communication, this feature allows guests to send emails directly to the couple, Kathleen and Adam. Whether guests encounter difficulties, need further assistance, or have concerns about their RSVP, this accessible contact option ensures a quick and personalized response. The couple welcomes any inquiries or messages related to the wedding, providing a supportive means for guests to communicate their needs.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Known Bugs and Issue Resolution
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+During the development of this wedding website, I encountered and resolved several issues to ensure a smooth and functional user experience. Below are some of the known bugs and how I addressed them:
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+1. **Navbar Overlapping Issue:**
+   - **Description:** On smaller screens, the navbar was overlapping with the content.
+   - **Resolution:** I implemented Bootstrap's responsive classes to ensure the navbar collapses into a mobile-friendly menu, preventing overlap.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+2. **Form Submission without Required Fields:**
+   - **Description:** Users could submit the RSVP form without completing essential fields.
+   - **Resolution:** I added client-side validation to ensure users provide their first and last names and select menu options before submitting. Additionally, alert messages guide users on missing details.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+3. **Background Music Controls:**
+   - **Description:** Background music controls were not responsive on all devices.
+   - **Resolution:** I adjusted the JavaScript code to improve the responsiveness of the music toggle function across various devices.
 
-------
+4. **Email.js Integration:**
+   - **Description:** Issues were faced during the integration of Email.js for RSVP submissions.
+   - **Resolution:** I successfully integrated Email.js, enabling the secure collection of RSVP details and messages. Detailed instructions for Email.js configuration are provided in the [Email JS](#email-js) section.
 
-## FAQ about the uptime script
+### Potential Remaining Bugs
 
-**Why have you added this script?**
+While extensive testing has been conducted, there may still be potential bugs that require attention. Please report any issues you encounter, and I will address them promptly to enhance the overall website experience.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+If you come across any bugs or have suggestions for improvement, please [contact us](#contact-us). Your feedback is valuable in ensuring a flawless and enjoyable experience for all users.
 
-**How will this affect me?**
+## Technologies Used
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- HTML
+- CSS
+- JavaScript
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Testing
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+| Feature                       | Description                                             | Expected Outcome                                      | Status    |
+|-------------------------------|---------------------------------------------------------|--------------------------------------------------------|-----------|
+| Responsive Design             | Test the website's responsiveness on various devices.   | Smooth adaptation to different screen sizes.          | ✅ Passed  |
+| Navbar Navigation             | Ensure navigation links redirect to the correct pages.   | Clicking on each navbar link opens the respective page.| ✅ Passed  |
+| RSVP Form Submission          | Verify the RSVP form submission process.                | Successful submission of the form with valid details. | ✅ Passed  |
+| Form Validation               | Test if the form prompts correctly for missing details. | Alert messages guide users to complete required fields.| ✅ Passed  |
+| Background Music Controls     | Check functionality of background music controls.      | Music toggles on and off, adjusting volume as expected.| ✅ Passed  |
+| Email.js Integration          | Confirm that Email.js securely collects RSVP details.   | Successfully receive test RSVP email with correct data.| ✅ Passed  |
+| Alert Messages                | Ensure alert messages display for form validation.      | Alerts prompt users to correct missing or invalid data.| ✅ Passed  |
+| Contact Us Link               | Test if the "Contact Us" link sends emails correctly.   | Emails are delivered to the specified contact address. | ✅ Passed  |
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+## Validator Testing
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- HTML
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+   - I can confirm no errors were returned when passing through the official w3c validator.
+- CSS
 
-**Anything more?**
+   - I can confirm no errors were returned when passing through the official w3c validator.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- Javascript
 
----
+   - I used the JS Hint to check my code and I can confirm all clear and no errors were found.
 
-Happy coding!
+- Accessibility
+
+   - I confirmed the colours and fonts are easy to read and I tested the colours I have chosen through the web aim contrast checker.
+   - I used the lighthouse in dev tools to test my web page on a desktop and mobile devices.
+
+## Deployment
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+   - In the GitHub repository, navigate to the Settings tab
+   - From the source section drop-down menu, select the Main Branch
+   - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live website can be found [here](https://huddy2022.github.io/KathleenAndAdamsWedding/).
+
+## Credits
+
+- [Mention any external resources, tools, or inspirations you used in the project.]
+- [Credit to photographers if using images from external sources.]
+- [Any other credits or acknowledgments.]
+
+## Feedback
+
+We welcome any feedback or suggestions you may have. Feel free to reach out via the "Contact Us" section.
+
+Thank you for visiting our wedding website! We look forward to celebrating this joyous occasion with you.
