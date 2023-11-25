@@ -23,17 +23,25 @@ The navigation menu is crafted for user-friendliness, employing responsive desig
 - **Wishing Well**
 - **RSVP**
 
+![Navigation]()
+
 ### Home
 
 The home page welcomes you with a captivating image or logo related to our wedding, creating an inviting atmosphere that sets the tone for the celebration. Below the image, a countdown clock dynamically displays the time remaining until the ceremony. Additionally, a prominent RSVP by date button and a speaker toggle button for music control are accessible on all pages, except the RSVP page, where only the speaker button is available.
+
+![Home page]()
 
 ### The Venue
 
 The venue page is divided into two containers: one detailing nearby accommodations with direct links to hotel websites, and the other providing essential parking information. Explore a variety of lodging options and plan for on-site or nearby parking.
 
+![Venue page]()
+
 ### Information
 
 The Information page outlines crucial details for our June 14th, 2024 wedding celebration. It addresses our child attendance policy, specifying that, unfortunately, we can only accommodate our own children. The dress code is Cocktail/Formal, and we kindly request privacy regarding photography, urging guests not to share images of our children on social media. Your cooperation is appreciated. Please RSVP by February 19th, 2024.
+
+![Information page]()
 
 ### Schedule
 
@@ -41,13 +49,20 @@ The Schedule page serves as a focal point for crucial details surrounding the we
 
 Displayed on the Schedule page is a visually engaging timeline that outlines the sequential order of events. From guest arrival and seating to the ceremony, drinks reception, wedding breakfast, speeches, cake cutting, first dance, evening refreshments, and concluding with the end of music and transportation arrangements, the timeline offers a comprehensive overview of the wedding festivities.
 
+![Schedule page]()
+
+
 ### Wishing Well
 
 The Wishing Well page conveys our heartfelt gratitude for your presence at our celebration. While your love and laughter are the greatest gifts, should you wish to contribute, we will have a honeymoon wishing well available on the day. Your support in helping us create new experiences and cherished memories is genuinely appreciated.
 
+![Wishing well page]()
+
 ### RSVP
 
 The "RSVP" page is where you can confirm your attendance and provide additional details for our wedding. Begin by entering your first and last name, then proceed to select your menu options for starters, mains, and desserts. Feel free to share any additional comments or dietary requests in the provided text area. Please ensure you submit your RSVP by the 19th of February 2024. If you encounter any difficulties or have questions, contact us. Your presence on our special day means the world to us.
+
+![RSVP page]()
 
 ### Email JS
 
@@ -57,9 +72,13 @@ The RSVP page incorporates Email.js to seamlessly collect and process RSVP submi
 
 To enhance the user experience, the RSVP page features helpful alerts that guide guests through the form submission process. If a user attempts to submit the form without completing essential fields, such as the first and last name, or neglects to choose menu options for starters, mains, and desserts, an alert will appear. These alerts ensure that guests are aware of any missed details and provide specific instructions on how to proceed. For example, if the user forgets to enter their name, a prompt will guide them to input both their first and last names before continuing. These alerts aim to streamline the RSVP process and assist guests in providing comprehensive and accurate information.
 
+![Alert]()
+
 ### Contact Us
 
 The Contact Us link on the RSVP page serves as a direct channel for guests to reach out in case of any challenges or if they are unable to attend. Designed to streamline communication, this feature allows guests to send emails directly to the couple, Kathleen and Adam. Whether guests encounter difficulties, need further assistance, or have concerns about their RSVP, this accessible contact option ensures a quick and personalized response. The couple welcomes any inquiries or messages related to the wedding, providing a supportive means for guests to communicate their needs.
+
+![Contact us]()
 
 ### Known Bugs and Issue Resolution
 
@@ -92,6 +111,7 @@ If you come across any bugs or have suggestions for improvement, please [contact
 - HTML
 - CSS
 - JavaScript
+- Bootstrap
 
 ## Testing
 
@@ -100,6 +120,7 @@ If you come across any bugs or have suggestions for improvement, please [contact
 |-------------------------------|---------------------------------------------------------|--------------------------------------------------------|-----------|
 | Responsive Design             | Test the website's responsiveness on various devices.   | Smooth adaptation to different screen sizes.          | ✅ Passed  |
 | Navbar Navigation             | Ensure navigation links redirect to the correct pages.   | Clicking on each navbar link opens the respective page.| ✅ Passed  |
+| Venue Navigation              | Ensure navigation links work for each local hotel page.   | Clicking on each navigation button opens respective page.| ✅ Passed  | 
 | RSVP Form Submission          | Verify the RSVP form submission process.                | Successful submission of the form with valid details. | ✅ Passed  |
 | Form Validation               | Test if the form prompts correctly for missing details. | Alert messages guide users to complete required fields.| ✅ Passed  |
 | Background Music Controls     | Check functionality of background music controls.      | Music toggles on and off, adjusting volume as expected.| ✅ Passed  |
@@ -137,9 +158,22 @@ The live website can be found [here](https://huddy2022.github.io/KathleenAndAdam
 
 ## Credits
 
-- [Mention any external resources, tools, or inspirations you used in the project.]
-- [Credit to photographers if using images from external sources.]
-- [Any other credits or acknowledgments.]
+
+- Background images: 
+  - [Pexels](https://www.pexels.com/)
+  - [Freepik](https://www.freepik.com/)
+
+- Image creation:
+  - [Canva](https://www.canva.com/) (Used for creating some images on the home page and schedule)
+
+- Favicon image:
+  - [FreeFavicon](https://www.freefavicon.com/)
+
+- Background wedding music:
+  - [Chosic](https://www.chosic.com/)
+
+- Wedding setup inspiration:
+  - [WedSites Blog](https://blog.wedsites.com/10-beautiful-wedding-website-examples-to-inspire-you/)
 
 ## Feedback
 
